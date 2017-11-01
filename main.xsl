@@ -10,8 +10,13 @@
         1 &test;
         <xsl:text>2 &test;</xsl:text>
 
-        <xsl:call-template name="include" />
+        <!--<xsl:call-template name="include" />-->
+
+        <xsl:call-template name="customInclude" />
     </xsl:template>
 
-    <xsl:include href="include.xsl" />
+    <!--<xsl:include href="include.xsl" />-->
+
+    <xsl:include href="custom://localhost/customInclude.xsl" />
+    <!--<xsl:include href="customInclude.xsl" />-->
 </xsl:stylesheet>
